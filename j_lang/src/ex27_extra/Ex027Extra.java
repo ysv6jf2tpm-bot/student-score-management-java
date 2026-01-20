@@ -67,7 +67,16 @@ class Ex027Extra
     }
 }
 
+<<<<<<< HEAD
 /* 入力ファイル    "student_extra.dat"
+=======
+/* コンパイルと実行
+j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
+j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
+*/
+
+/* 入力ファイル "student_extra.dat"
+>>>>>>> b4ca30a (commit)
 10,中野太郎,s
 aa,亀戸花子,S
 120,板橋一郎,i

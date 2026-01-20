@@ -42,7 +42,7 @@ public class Human extends Student implements InfStudent
                           getTotal(),
                           getAvg());
     }
-    public void showToFile(PrintWriter pw)
+    public void show(PrintWriter pw)
     {
         pw.printf("%-4d　%s\t%4d\t%4d\t%4d(%s)\t%6d\t%6.1f\n",
                     super.getNo(),

@@ -49,12 +49,12 @@ public abstract class Student
     public abstract void setSelect(int kamoku);
     public abstract String getSelectName();
     public abstract void show();
-    public abstract void showToFile(PrintWriter pw);
+    public abstract void show(PrintWriter pw);
     public static void printTitle()
     {
         System.out.println("\t番号　氏名\t国語\t英語\t　選択\t\t合計点\t平均点");
     }
-    public static void writeTitle(PrintWriter pw)
+    public static void printTitle(PrintWriter pw)
     {
         pw.println("番号　氏名\t国語\t英語\t　選択\t\t合計点\t平均点");
     }
