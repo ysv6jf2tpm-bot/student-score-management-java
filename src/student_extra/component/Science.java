@@ -2,33 +2,33 @@ package pkstudent_extra.component;
 
 import java.io.*;
 
-public class Human extends Student implements InfStudent
+public class Science extends Student implements InfStudent
 {
-    private int syakai;
+    private int sugaku;
     
-    public Human(int no,String name)
+    public Science(int no,String name)
     {
         super(no,name);
     }
-    public int getSyakai()
+    public int getSugaku()
     {
-        return syakai;
+        return sugaku;
     }
     public int getTotal()
     {
-        return super.getKokugo() + super.getEigo() + getSyakai();
+        return super.getKokugo() + super.getEigo() + getSugaku();
     }
     public double getAvg()
     {
         return (double)getTotal() / 3;
     }
-    public void setSelect(int syakai)
+    public void setSelect(int sugaku)
     {
-        this.syakai = syakai;
+        this.sugaku = sugaku;
     }
     public String getSelectName()
     {
-        return "社会";
+        return "数学";
     }
     public void show()
     {
@@ -37,7 +37,7 @@ public class Human extends Student implements InfStudent
                           super.getName(),
                           super.getKokugo(),
                           super.getEigo(),
-                          getSyakai(),
+                          getSugaku(),
                           getSelectName(),
                           getTotal(),
                           getAvg());
@@ -49,7 +49,7 @@ public class Human extends Student implements InfStudent
                     super.getName(),
                     super.getKokugo(),
                     super.getEigo(),
-                    getSyakai(),
+                    getSugaku(),
                     getSelectName(),
                     getTotal(),
                     getAvg());
