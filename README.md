@@ -48,12 +48,6 @@ CSV形式の入力ファイル（学生番号・氏名・専攻区分）から�
   メニュー終了時に `student_out.txt` へ成績一覧表示と同じ形式で保存
   点数未入力時は基本情報のみ出力
 
-## 実行方法
-```bash
-j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
-j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
-# student-score-management-java
-
 ## ディレクトリ構成
 student-score-management-java
 └ j_lang
@@ -77,3 +71,9 @@ student-score-management-java
             ├ Science.java             ← 理系学生（数学）クラス
             ├ StudentException.java    ← カスタム例外クラス
             └ StudentCheck.java        ← 入力バリデーションクラス
+
+## 実行方法
+```bash
+j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
+j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
+# student-score-management-java
