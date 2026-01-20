@@ -49,7 +49,7 @@ CSV形式の入力ファイル（学生番号・氏名・専攻区分）から�
   点数未入力時は基本情報のみ出力
 
 ## ディレクトリ構成
-**```bash
+** ```bash
 student-score-management-java
 └ j_lang
    ├ student_extra.dat                 ← 入力データ（学生リスト）
@@ -75,7 +75,7 @@ student-score-management-java
 **
 
 ## 実行方法
-**```bash
+** ```bash
 j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
 j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
 **
