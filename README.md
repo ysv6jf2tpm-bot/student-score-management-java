@@ -72,6 +72,7 @@ student-score-management-java
             ├ Science.java             ← 理系学生（数学）クラス
             ├ StudentException.java    ← カスタム例外クラス
             └ StudentCheck.java        ← 入力バリデーションクラス
+# student-score-management-java
 
 ## 実行方法
 ```bash
