@@ -72,10 +72,11 @@ student-score-management-java
             ├ Science.java             ← 理系学生（数学）クラス
             ├ StudentException.java    ← カスタム例外クラス
             └ StudentCheck.java        ← 入力バリデーションクラス
-# student-score-management-java
+```
 
 ## 実行方法
 ```bash
 j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
 j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
 # student-score-management-java
+```
