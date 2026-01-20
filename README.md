@@ -49,6 +49,7 @@ CSV形式の入力ファイル（学生番号・氏名・専攻区分）から�
   点数未入力時は基本情報のみ出力
 
 ## ディレクトリ構成
+```bash
 student-score-management-java
 └ j_lang
    ├ student_extra.dat                 ← 入力データ（学生リスト）
@@ -71,6 +72,7 @@ student-score-management-java
             ├ Science.java             ← 理系学生（数学）クラス
             ├ StudentException.java    ← カスタム例外クラス
             └ StudentCheck.java        ← 入力バリデーションクラス
+# student-score-management-java
 
 ## 実行方法
 ```bash
