@@ -2,6 +2,7 @@ package pkex27_extra;
 
 import java.io.*;
 
+//メニュー制御クラス
 public class MenuController
 {
     private String title;
@@ -26,6 +27,7 @@ public class MenuController
             this.labels[i] = labels[i];
         }
     }
+    //メニュー表示メソッド
     public void dispMenu()
     {
         printAsters(25);
@@ -42,6 +44,7 @@ public class MenuController
         }
         System.out.print("\n");
     }
+    //処理番号の入力を受け取るメソッド
     public int inputOption() throws IOException
     {
         int opt = 0;
@@ -49,14 +52,19 @@ public class MenuController
         BufferedReader br =
             new BufferedReader
             (new InputStreamReader(System.in));
+        
+        //okがfalseの間ループする
         while(!ok){
             try{
                 System.out.print("処理番号==>");
                 opt = Integer.parseInt(br.readLine());
+                
+                //処理番号配列のいずれかと一致すればokにtrueを代入する
                 for(int i = 0; ok == false && i < options.length; i++){
                     if(options[i] == opt)
                         ok = true;
                 }
+                
                 if(!ok)
                     System.out.println("エラー：無効な処理番号です。");
                 else if(opt == options[options.length - 1]){
