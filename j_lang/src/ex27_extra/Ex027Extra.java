@@ -4,27 +4,36 @@ import pkstudent_extra.*;
 import pkstudent_extra.component.*;
 import java.io.IOException;
 
+//アプリケーションクラス
 class Ex027Extra
 {
     public static void main(String[] args) throws IOException
     {
         System.out.println("Java課題27(補充)　成績システム");
+        
+        //コマンドライン引数が2のとき処理を開始する
         if(args.length == 2){
             try{
+            	//学生管理クラス、初期化クラスのオブジェクトを作成してリストに学生の情報を初期化する
                 StudentMgr mgr = new StudentMgr();
                 Init in = new Init(mgr);
                 in.loadFromFile(args[0]);
                 System.out.println("学生リストを作成しました。");
+                
+                int end = 99; //終了コード
+                int opt = 0; //メニュー制御クラスのinputOptionメソッドの戻り値を受け取る
+                
+                //メニュー制御クラスで表示する内容を決める
                 MenuController mc = new MenuController("成績システム",4);
-                mc.setOptions(new int[]{1,2,3,99});
+                mc.setOptions(new int[]{1,2,3,end});
                 mc.setLabels(new String[]{"点数入力","学生検索","成績一覧","終了"});
-                int end = 99;
-                int opt = 0;
+                
+                //optとendが一致しない間ループする
                 while(opt != end){
                     mc.dispMenu();
                     opt = mc.inputOption();
                     switch(opt){
-                        case 1:
+                        case 1: //点数入力
                         	if(mgr.isScoreInputDone())
                         		System.out.println("エラー：点数入力は既に完了しています。");
                         	else{
@@ -32,15 +41,15 @@ class Ex027Extra
                             	si.enterScores();
                         	}
                             break;
-                        case 2:
+                        case 2: //学生検索
                             StudentSearch ss = new StudentSearch(mgr);
                             ss.findStudent();
                             break;
-                        case 3:
+                        case 3: //成績一覧表示
                             ScoreList sl = new ScoreList(mgr);
                             sl.dispScores();
                             break;
-                        case 99:
+                        case 99: //終了
                             Fin f = new Fin(mgr);
                             f.saveToFile(args[1]);
                             break;
@@ -48,6 +57,7 @@ class Ex027Extra
                             break;
                     }
                 }
+                
             }catch(IOException e){
                 System.out.println("入出力エラー");
             }
@@ -57,8 +67,7 @@ class Ex027Extra
     }
 }
 
-/* 入力ファイル
-"Z:\neo_j_lang\student_extra.dat"
+/* 入力ファイル    "student_extra.dat"
 10,中野太郎,s
 aa,亀戸花子,S
 120,板橋一郎,i
@@ -72,8 +81,7 @@ aa,亀戸花子,S
 20,赤羽保子,H
 */
 
-/*
-"Z:\neo_j_lang\src\ex27_extra\学生の点数.txt"
+/* 学生の点数
 10,中野太郎,90,85,30
 13,品川三郎,96,93,100
 14,飯田和男,87,92,0
