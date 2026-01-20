@@ -19,6 +19,6 @@ CUIベースの成績管理システムです。
 
 ## 実行方法
 ```bash
-javac -encoding UTF-8 -d ./ src/**/**/*.java
-java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
+j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
+j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
 # student-score-management-java
