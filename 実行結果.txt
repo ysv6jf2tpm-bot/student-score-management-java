@@ -1,7 +1,7 @@
 /* 実行結果
-Z:\neo_j_lang>javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
+j_lang (main) $ javac -encoding UTF-8 -d ./ src/student_extra/*.java src/student_extra/component/*.java src/ex27_extra/*.java
+j_lang (main) $ java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
 
-Z:\neo_j_lang>java pkex27_extra.Ex027Extra student_extra.dat student_out.txt
 Java課題27(補充)　成績システム
 aa,亀戸花子,S   For input string: "aa"
 120,板橋一郎,i  番号範囲エラー：1～100
@@ -293,3 +293,4 @@ aa,亀戸花子,S   For input string: "aa"
 19  　王子公子
 20  　赤羽保子
 */
+
